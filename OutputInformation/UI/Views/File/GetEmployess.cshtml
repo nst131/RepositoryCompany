@@ -1,0 +1,85 @@
+﻿@model ICollection<UI.Models.EmployeeUI.Dto.ResponseGetEmployeeDtoUI>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+</head>
+<body>
+<div>
+    <h1>Employess</h1>
+    <table class="table table-striped">
+        @foreach (var item in @Model)
+        {
+            <tr>
+                    <th>Name</th>
+                    <td>@item.Name</td>
+                </tr>
+                <tr>
+                    <th>SerName</th>
+                    <td>@item.SerName</td>
+                </tr>
+                <tr>
+                    <th>Patronymic</th>
+                    <td>@item.Patronymic</td>
+                </tr>
+                <tr>
+                    <th>Telephone</th>
+                    <td>@item.Telephone</td>
+                </tr>
+                <tr>
+                    <th>Address</th>
+                    <td>@item.FullAddress</td>
+                </tr>
+                <tr>
+                    <th>Position</th>
+                    <td>@item.PositionName</td>
+                </tr>
+                <tr>
+                    <th>Department</th>
+                    <td>@item.DepartmentName</td>
+                </tr>
+                <tr>
+                    <th>Company</th>
+                    <td>@item.CompaniesName</td>
+                </tr>
+        }
+    </table>
+</div>
+</body>
+</html>
+
+<style>
+    .table {
+        width: 100%;
+        margin-bottom: 20px;
+        border: 5px solid #fff;
+        border-top: 5px solid #fff;
+        border-bottom: 3px solid #fff;
+        border-collapse: collapse; 
+        outline: 3px solid #ffd300;
+        font-size: 15px;
+        background: #fff!important;
+    }
+    .table th {
+        font-weight: bold;
+        padding: 7px;
+        background: #ffd300;
+        border: none;
+        text-align: left;
+        font-size: 15px;
+        border-top: 3px solid #fff;
+        border-bottom: 3px solid #ffd300;
+    }
+    .table td {
+        padding: 7px;
+        border: none;
+        border-top: 3px solid #fff;
+        border-bottom: 3px solid #fff;
+        font-size: 15px;
+    }
+    .table tr:nth-child(even){
+        background: #f8f8f8!important;
+    }
+</style>
